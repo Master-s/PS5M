@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>PS5 Kernel Exploit (3.xx-4.xx)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #0e6cc4;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
+/*waves****************************/
+
+
+.box {
+    position: fixed;
+    top: 0;
+    transform: rotate(80deg);
+    left: 0;
+}
+
+.wave {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: .4;
+    position: absolute;
+    top: 3%;
+    left: 10%;
+    background: #0af;
+    width: 1500px;
+    height: 1300px;
+    margin-left: -150px;
+    margin-top: -250px;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 7000ms infinite linear;
+}
+
+.wave.-three {
+    animation: drift 7500ms infinite linear;
+    position: fixed;
+    background-color: #77daff;
+}
+
+.wave.-two {
+    animation: drift 3000ms infinite linear;
+    opacity: .1;
+    background: black;
+    position: fixed;
+}
+
+.box:after {
+    content: '';
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translate3d(0, 0, 0);
+}
+
+@keyframes drift {
+    from { transform: rotate(0deg); }
+    from { transform: rotate(360deg); }
+}
+
+/*LOADING SPACE*/
+
+.contain {
+    animation-delay: 4s;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    background: #25a7d7;
+    background: -webkit-linear-gradient(#25a7d7, #2962FF);
+    background: linear-gradient(#25a7d7, #25a7d7);
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 5px;
+}
+
+/*Animation*/
+.icon:nth-child(2) img {-webkit-animation-delay: 0.2s;animation-delay: 0.2s}
+.icon:nth-child(3) img {-webkit-animation-delay: 0.3s;animation-delay: 0.3s}
+.icon:nth-child(4) img {-webkit-animation-delay: 0.4s;animation-delay: 0.4s}
+
+.icon img {
+    -webkit-animation: anim 2s ease infinite;
+    animation: anim 2s ease infinite;
+    -webkit-transform: scale(0,0) rotateZ(180deg);
+    transform: scale(0,0) rotateZ(180deg);
+}
+
+@-webkit-keyframes anim{
+    0% {
+        -webkit-transform: scale(0,0) rotateZ(-90deg);
+        transform: scale(0,0) rotateZ(-90deg);opacity:0
+    }
+    30% {
+        -webkit-transform: scale(1,1) rotateZ(0deg);
+        transform: scale(1,1) rotateZ(0deg);opacity:1
+    }
+    50% {
+        -webkit-transform: scale(1,1) rotateZ(0deg);
+        transform: scale(1,1) rotateZ(0deg);opacity:1
+    }
+    80% {
+        -webkit-transform: scale(0,0) rotateZ(90deg);
+        transform: scale(0,0) rotateZ(90deg);opacity:0
+    }
+}
+
+@keyframes anim{
+    0% {
+        -webkit-transform: scale(0,0) rotateZ(-90deg);
+        transform: scale(0,0) rotateZ(-90deg);opacity:0
+    }
+    30% {
+        -webkit-transform: scale(1,1) rotateZ(0deg);transform: scale(1,1) rotateZ(0deg);opacity:1
+    }
+    50% {
+        -webkit-transform: scale(1,1) rotateZ(0deg);
+        transform: scale(1,1) rotateZ(0deg);opacity:1
+    }
+    80% {
+        -webkit-transform: scale(0,0) rotateZ(90deg);
+        transform: scale(0,0) rotateZ(90deg);opacity:0
+    }
+}
+</style>
+   <style>
+        .loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -75px 0 0 -75px;
+    border: 10px solid #00293c;
+    border-radius: 50%;
+    border-top: 10px solid #0084c1;
+    border-left: 10px solid #0070b3;
+    width: 120px;
+    height: 120px;
+    animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .info {
+            overflow: hidden;
+            position: fixed;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+
+            font-size: 45px;
+            font-family: sans-serif;
+            color: #b8b8b8;
+
+            transform: translate(-50%, -50%);
+        }
+        .j {
+            font-size: 15px;
+            color: #2F3335;
+        }
+
+        .log {
+    background-color: black;
+    display: block;
+    unicode-bidi: embed;
+    font-family: monospace;
+    white-space: pre;
+    font-size: 18px;
+    width: 100%;
+    height: 83%;
+    color: rgb(240, 248, 255);
+        }
+    </style>
+        <style>
+a:link, a:visited {
+    color: #ffffff;
+    padding: 2px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: red;
+}
+</style>
+        <script>
+        function allset() {
+            document.getElementById("loader").style.display = "none";
+        }
+    </script>
+    <script defer src="int64.js"></script>
+    <script defer src="rop.js"></script>
+    <script defer src="exploit.js"></script>
+</head>
+<body onload="setTimeout(poc, 1500);">
+
+
+<span style="color: rgb(245, 250, 255);"><p style="text-align: center">PS5 Kernel Exploit (3.xx-4.xx)</p></span></h3>
+        <div id="loader" class="loader"></div>
+    <textarea id="console" class="log" style="
+    height: 640px;
+"></textarea>
+
+<div class='box'>
+    <div class='wave -one'></div>
+    <div class='wave -two'></div>
+    <div class='wave -three'></div>
+</div>
+<center>
+    <span style="color: rgb(245, 250, 255);"><b>v1.02.</b>
+            <a href="https://twitter.com/theflow0">@theflow0</a>,
+            <a href="https://twitter.com/SpecterDev">@SpecterDev</a>,
+            <span style="color: #0A0000">ChendoChap,</span>
+            <a href="https://twitter.com/Znullptr">@Znullptr</a>,
+            <a href="https://twitter.com/sleirsgoevy">@sleirsgoevy</a>,
+            <br />
+            <a href="https://twitter.com/psxdev">@psxdev</a>,
+            <a href="https://twitter.com/flat_z">@flat_z</a>,
+            <a href="https://twitter.com/notzecoxao">@notzecoxao</a>,
+            <a href="https://twitter.com/SocraticBliss">@SocraticBliss</a>,
+            laureeeeeee
+            </span>
+    </center>
+</body>
+</html>
