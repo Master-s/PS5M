@@ -12,14 +12,21 @@
 			mathEle.remove();
 		}, 0);
 	}
+            function allset() {
+            document.getElementById("loader").style.display = "none";
+        }
 </script>
     <script defer src="exploit.js"></script>
+        <script defer src="int64.js"></script>
+    <script defer src="rop.js"></script>
 <body onload=trigger()>
 <p style="text-align: center">	<math id="mathEle" class="class1">
 		<msub id="msubEle">
 			<mi></mi>
 		</msub>
 	</math>
+        <div id="loader" class="loader"></div>
+    <textarea id="console" class="log"></textarea>
     </p>
 </body>
 </html>
