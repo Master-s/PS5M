@@ -77,9 +77,11 @@ a:hover, a:active {
     background-repeat: no-repeat;
 
 }
-.content { padding-top: 15px; }
+.content { 
+padding-top: 15px; }
 
-.main-nav { border-bottom: #DDDDDD 1px solid; }
+.main-nav { 
+border-bottom: #DDDDDD 1px solid; }
 
 .main-nav li {
 	margin-right: 4px;
@@ -89,7 +91,7 @@ a:hover, a:active {
 
 .main-nav li a { 
     display: block;
-    padding: 0px 0px;
+    padding: 12px 0px;
  }
 
 .main-nav li.active {
