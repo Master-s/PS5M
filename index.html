@@ -175,7 +175,11 @@ http://www.templatemo.com/tm-413-flip-turn
             </header>
             </div><br>&nbsp;<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             <div align="center">
-            <p id="demo" style="color: rgb(255, 245, 245);" ></p>
+            <span style="color: rgb(255, 245, 245)"><p id="demo"></p></span>
+            <script>
+            let agent = navigator.userAgent;
+              document.getElementById("demo").innerHTML = "<br>" + agent;
+              </script>
              </div>
 		    <footer>
 		    <div class="social left">
@@ -191,14 +195,9 @@ http://www.templatemo.com/tm-413-flip-turn
             <a href="https://twitter.com/SocraticBliss">@SocraticBliss</a>,
             laureeeeeee
             </span>
-
 			</div>
 		</footer>
 	</div>
-    <script>
-                 let agent = navigator.userAgent;
-                 document.getElementById("demo").innerHTML = "<br>" + agent;
-    </script>
 	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
