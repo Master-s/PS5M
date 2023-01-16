@@ -15,7 +15,8 @@ a { text-decoration: none; }
 
 /*  2. Universal styles
 --------------------------------------*/
-body { background-color: #eee; }
+body { 
+background-color: #eee; }
 
 h1 {
 	font-size: 30px;
@@ -32,20 +33,25 @@ h2, h3, footer i { font-size: 18px; }
 
 p, form, ul { font-size: 14px; }
 
-.subtitle { font-weight: bold; color: #ffffff; }
+.subtitle { 
+font-weight: bold; color: #ffffff; }
 
-.portfolio-group .detail p { font-size: 12px; }
+.portfolio-group .detail p { 
+font-size: 12px; }
 
-footer p, address {	font-size: 14px; }
+footer p, address {	
+font-size: 14px; }
 
-#templatemo_timeline .time_line_paragraph h1 { font-size: 24px; }
+#templatemo_timeline .time_line_paragraph h1 { 
+font-size: 24px; }
 
 #logo a {	
 	color: #ffffff; 
 	margin-left: 15px;
 	margin-right: 15px;
 }
-#logo, #templatemo_timeline i {	font-size: 18px; }
+#logo, #templatemo_timeline i {	
+font-size: 18px; }
 
 .main-container { 
 	max-width: 1200px;
@@ -74,16 +80,25 @@ a:hover, a:active {
 .main-nav { border-bottom: #DDDDDD 1px solid; }
 
 .main-nav li {
-	margin-right: 2px;
-	background-color: rgba(255, 255, 255, 1);
+	margin-right: 4px;
+	background-color: rgba(247, 247, 247, 0.38);
 	box-shadow: 1px 1px 1px rgba(80, 80, 80, 0.4);
 }
 
-.main-nav li a { display: block; padding: 12px 24px; }
+.main-nav li a { 
+    display: block;
+    padding: 0px 0px;
+ }
 
-.main-nav li.active { background-color: #A7DDFF; padding: 12px 24px; }
+.main-nav li.active {
 
-.main-nav li a:hover { background-color: #A7DDFF; }
+    background-color: rgb(255, 255, 255);
+    padding: 24px 24px;
+	}
+
+.main-nav li a:hover { 
+background-color: #A7DDFF;
+ }
 
 nav {
 	overflow: hidden;
