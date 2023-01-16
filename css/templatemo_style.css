@@ -23,8 +23,6 @@ a { text-decoration: none; }
 
 /*  2. Universal styles
 --------------------------------------*/
-
-* {	font-family: 'Open Sans', sans-serif; }
 body { background-color: #eee; }
 
 h1 {
