@@ -16,7 +16,9 @@ a { text-decoration: none; }
 /*  2. Universal styles
 --------------------------------------*/
 body { 
-background-color: #eee; }
+
+    background-color: #07397e;
+ }
 
 h1 {
 	font-size: 30px;
