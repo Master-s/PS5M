@@ -70,6 +70,15 @@ footer p, address {	font-size: 14px; }
 	margin: 0 auto;
 	padding: 15px;
 }
+a:hover, a:active {
+    background-image: url("images/backgroundicon.png");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-size: 196px 196px;
+    background-repeat: no-repeat;
+
+}
 .content { padding-top: 15px; }
 
 .main-nav { border-bottom: #DDDDDD 1px solid; }

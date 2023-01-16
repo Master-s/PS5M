@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- templatemo 413 flip turn -->
-<!-- 
+<!--
 Flip Turn Template 
 http://www.templatemo.com/tm-413-flip-turn
 -->
@@ -28,11 +28,121 @@ http://www.templatemo.com/tm-413-flip-turn
         text-decoration: none;
         display: inline-block;
 }
-a:hover, a:active {
-    background-color: rgb(0, 23, 36) ;
-}
  </style>
+ <style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+      width: 160px;
+    height: 174px;
 
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 145px;
+  left: 111%;
+
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+
+}
+</style>
+<style type="text/css">
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 10px 16px;
+
+}
+
+.btn-lg {
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+
+/***********************
+  OUTLINE BUTTONS
+************************/
+
+.btn.outline {
+  background: none;
+
+}
+.btn-primary.outline {
+  color: #0099cc;
+
+}
+.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
+  color: #33a6cc;
+  border-color: #33a6cc;
+    background-image: url(images/backgroundicon.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-size: 196px 196px;
+    background-repeat: no-repeat;
+}
+.btn-primary.outline:active, .btn-primary.outline.active {
+  border-color: #007299;
+  color: #007299;
+  box-shadow: none;
+}
+
+/***********************
+  CUSTON BTN VALUES
+************************/
+
+.btn {
+  padding: 14px 24px;
+  border: 0 none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus {
+  outline: 0 none;
+}
+</style>
 
 </head>
 <body class="hero-image">
@@ -43,31 +153,36 @@ a:hover, a:active {
 				<li class="btn active">PS5</li>
 			</ul>
 		</nav>
-                 <h3><span style="color: #E3E3E3"><p style="text-align: center">PS5 5.00 to 6.0x PS4 9.00 to 10.01</p></span></h3>
-<p style="text-align: center"><a href="meme.html"><img src="images\PS5-5.xx-6.xx.png" width="196" height="161" alt=""></a></span></p>
-<h3><span style="color: #E3E3E3"><p style="text-align: center">PS5 Kernel Exploit (3.xx-4.xx)</p></span></h3>
-		<div class="content-container">
+            <div id="logo" class="center"><a href="#">PS5 Kernel Exploit (3.xx-4.xx)</a><a href="https://leeful.github.io/ps5/ ">(PS5 Browser v1.2 - By Leeful)</a></div>
+	        <div class="content-container">
 			<header>
              <p style="text-align: center">
-             <a href="https://leeful.github.io/ps5/ ">(PS5 Browser v1.2 - By Leeful)</a>
-
-             </p><br>
-            <p style="text-align: center">
-            <a href="m\PS5P.html"><img src="images\10-1.png" width="196" height="161" alt=""></a>
-            <a href="m\PS50.html"><img src="images\6-1.png" width="196" height="161" alt=""></a>
-            <a href="http://wolf2022.ir/ps5//"><img src="images\TheWolf1.png" width="186" height="153" alt=""></a>
-             <a href="https://ps5xploit.github.io/"><img src="images\Mouuu0-1.png" width="186" height="153" alt=""></a>
-            </p>
-		</header>
-
-        </div>
+             <div class="btn-group">
+             <button type="button" class="btn btn-primary btn-lg outline"><div class="tooltip"><a href="meme.html"><img src="images\PS5-5.xx-6.xx.png"></a>
+             <span class="tooltiptext">PS5 Kernel Exploit (3.xx-4.xx) v1.2</span>
+             </div></button>
+             <button type="button" class="btn btn-primary btn-lg outline"><div class="tooltip"><a href="m\PS5P.html"><img src="images\10-1.png"></a>
+             <span class="tooltiptext">PS5 Kernel Exploit (3.xx-4.xx) v1.2</span>
+             </div></button>
+             <button type="button" class="btn btn-primary btn-lg outline"><div class="tooltip"><a href="m\PS50.html"><img src="images\6-1.png"></a>
+             <span class="tooltiptext">PS5 Kernel Exploit (3.xx-4.xx) v1.2</span>
+             </div></button>
+             <button type="button" class="btn btn-primary btn-lg outline"><div class="tooltip"><a href="http://wolf2022.ir/ps5//"><img src="images\TheWolf1.png"></a>
+             <span class="tooltiptext">TheWolf (3.xx-4.xx) v1.2</span>
+             </div></button>
+             <button type="button" class="btn btn-primary btn-lg outline"><div class="tooltip"><a href="https://ps5xploit.github.io/"><img src="images\Mouuu0-1.png"></a>
+             <span class="tooltiptext">Mouuu (3.xx-4.xx) v1.2</span>
+             </div></button>
+             </div></p>
+            </header>
+        </div><br>&nbsp;
         <div align="center">
             <p id="demo" style="font-size:19px;color: rgb(255, 245, 245)" ></p>
+             </div>
 		<footer>
-
 		 <div class="social left">
-				<a href="#"><i class="fa fa-twitter"></i>
-                <a>Thanks to  </a>
+		  <a href="#"><i class="fa fa-twitter"></i>
+            <a>Thanks to  </a>
             <a href="https://twitter.com/theflow0">@theflow0</a>,
             <a href="https://twitter.com/SpecterDev">@SpecterDev</a>,
             <a href="https://twitter.com/Znullptr">@Znullptr</a>,
