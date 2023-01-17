@@ -1,0 +1,82 @@
+}
+.wbtn {
+  display: inline-block;
+  margin-bottom: 0;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 10px 16px;
+
+
+}
+.wbtn-lg {
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+.wbtn-primary {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+.wbtn-primary:hover,
+.wbtn-primary:focus,
+.wbtn-primary:active,
+.wbtn-primary.active,
+.wopen .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #3276b1;
+  border-color: #285e8e;
+
+
+}
+.wbtn.outline {
+  background: none;
+
+
+}
+.wbtn-primary.woutline {
+  color: #0099cc;
+
+}
+.wbtn-primary.outline:hover, .wbtn-primary.outline:focus, .wbtn-primary.woutline:active, .wbtn-primary.woutline.active, .wopen > .wdropdown-toggle.wbtn-primary {
+    background-image: url(TheWolf_background.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-size: 196px 196px;
+    background-repeat: no-repeat;
+
+}
+.wbtn-primary.outline:active, .wbtn-primary.outline.active {
+  border-color: #007299;
+  color: #007299;
+  box-shadow: none;
+        background-image: url(TheWolf_backgroundclick.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-size: 196px 196px;
+    background-repeat: no-repeat;
+
+}
+.wbtn {
+  padding: 20px 20px;
+  border: 0 none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-top: 10px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 24px;
+}
+.wbtn:focus, .wbtn:active:focus, .wbtn.active:focus {
+  outline: 0 none;
+}
