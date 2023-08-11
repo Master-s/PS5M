@@ -14,11 +14,14 @@
 
 }
     a:link, a:visited {
-        color: #d4d4d4;
-        padding: 2px 2px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
+color: #d4d4d4;
+    padding: 2px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    /* box-shadow: 0 0 black; */
+    background-color: #0260bd;
+    box-shadow: 0px 0px 1px 1px white;
 
 
 
@@ -103,6 +106,13 @@ window.applicationCache.oncached = window.applicationCache.onupdateready = funct
     <div id="progress"></div>
 
 <a href="netcat.html">JB+NETCAT</a>
+            <div align="center">
+            <span style="font-size: 20px"><span style="color: rgb(255, 245, 245)"><p id="demo"></p></span> </span>
+            <script>
+            let agent = navigator.userAgent;
+              document.getElementById("demo").innerHTML = "<br>" + agent;
+              </script>
+             </div>
 </body>
 
 </html>
