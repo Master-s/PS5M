@@ -1,6 +1,6 @@
 const payload_map =
     [
-		    {
+		{
             displayTitle: 'etaHEN',
             description: 'support for 4.00, 4.02',
             fileName: 'etaHEN-1.4B.bin',
@@ -33,7 +33,7 @@ const payload_map =
             version: '1.2'
         },
         {
-            displayTitle: 'libhijacker game-patch',
+            displayTitle: 'libhijacker game-patch',
             description: 'Patches supported games to run at higher framerates, and adds debug menus to certain titles.',
             fileName: 'libhijacker-1.138.elf',
             author: 'illusion0001, astrelsky',

@@ -100,7 +100,7 @@ input:focus {
 }
 
 .btn {
-    padding: 16px 32px;
+    padding: 1px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -177,14 +177,14 @@ a:focus {
 
 
 .payload-description {
-    color: #959595;
+    color: rgba(255, 255, 255, 0.64);
     margin: 0;
     padding: 0;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    line-height: 32px;
-    font-size: 15px;
+    line-height: 12px;
+    font-size: 10px;
 }
 
 .btn:hover p.payload-description {
@@ -192,7 +192,7 @@ a:focus {
 }
 
 .payload-author {
-    color: #777;
+    color: rgba(255, 255, 255, 0.64);
     margin: 0;
     padding: 0;
     text-overflow: ellipsis;
