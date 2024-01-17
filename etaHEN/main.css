@@ -89,7 +89,7 @@ body {
     position: relative;
     user-select: none;
     -webkit-user-select: none;
-    background-color: rgba(14, 14, 20, 0.2);
+    background-color: rgb(6 104 177 / 66%);
     color: white;
     /* font-family: Calibri, Helvetica, 'Sans-Serif'; */
     font-family: Arial;
