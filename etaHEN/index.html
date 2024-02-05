@@ -1,7 +1,7 @@
 <html manifest="cache.appcache">
 
 <head>
-    <title>🔵PS5 Kernel Exploit (3.xx-4.xx)☑️</title>
+    <title>🔵PS5 Kernel Exploit (3.xx-4.xx)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css">
 
@@ -11,15 +11,37 @@
     <script defer src="payload_map.js"></script>
     <script defer src="custom_host_stuff.js"></script>
     <script defer src="appcache_handler.js"></script>
+    <script defer src="module/utils.js"></script>
+    <script defer src="module/constants.js"></script>
+    <script defer src="module/int64.js"></script>
+    <script defer src="module/mem.js"></script>
+    <script defer src="module/memtools.js"></script>
+    <script defer src="module/rw.js"></script>
+    <script defer src="webkit_psfree.js"></script>
+    <script defer src="webkit_fontface.js"></script>
     <script>
+        addEventListener('unhandledrejection', (event) => {
+            const reason = event.reason;
+            // We log the line and column numbers as well since some exceptions (like
+            // SyntaxError) do not show it in the stack trace.
+            alert(
+                `${reason}\n`
+                + `${reason.sourceURL}:${reason.line}:${reason.column}\n`
+                + `${reason.stack}`
+            );
+            throw reason;
+        });
         window.addEventListener('load', function () {
             onload_setup();
         }, false);
     </script>
     <style type="text/css">
-     .body {
-
-
+    .main-wrapper {
+    border-radius: 4px;
+    background-color: rgba(244, 244, 244, 0.08);
+    padding: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    position: relative;
 }
     </style>
 </head>
@@ -34,13 +56,12 @@
             <symbol id="forward-arrow-icon" viewBox="0 -960 960 960" >
                 <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/>
             </symbol>
-
+            
         </defs>
     </svg>
 
     <div id="toast-container"></div>
-
-
+    
     <div id="redirector-view"
         style="min-width: 100%; max-width: 100%; position: absolute; top: 0; left: -100%; min-height: 100%; max-height: 100%;">
         <div style="overflow-y: scroll; width: 100%;max-height: 100vh;min-height: 100vh;" id="redirector-view-inner">
@@ -75,25 +96,40 @@
                 <br />
             </p>
         </div>
-        <div style="position: absolute; margin: 35px; top: 0; left: 10px;" class="opacity-transition" id="l2-redirect">
-            <div>
-                <span style="vertical-align: middle;display: inline-block;                ">
-                    <svg viewbox="0 0 79 61" xmlns="http://www.w3.org/2000/svg" style="width: 32px; height:32px;">
-                        <rect x="0" y="0" width="79" height="61" rx="13" ry="13" fill="#bdc0c2" />
-                        <text x="50%" y="50%" dy="17.5px" text-anchor="middle" fill="#4e4e4e" font-size="50"
-                            font-weight="bold">L2</text>
-                    </svg>
-                </span>
-                <span
-                    style="font-size: 18px; vertical-align: middle;display: inline-block; margin-left: 8px; font-weight: bold; color: #aaa;">Redirect</span>
+        <div style="position: absolute; margin: 20px; margin-right:28px; bottom: 0; right: 0px;" class="opacity-transition" id="l2-redirect">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 35px;">
+                <div >
+                    <span style="vertical-align: middle;display: inline-block;                ">
+                        <svg viewbox="0 0 79 61" xmlns="http://www.w3.org/2000/svg" style="width: 32px; height:32px;">
+                            <rect x="0" y="0" width="79" height="61" rx="13" ry="13" fill="#bdc0c2" />
+                            <text x="50%" y="50%" dy="17.5px" text-anchor="middle" fill="#4e4e4e" font-size="50"
+                                font-weight="bold">L2</text>
+                        </svg>
+                    </span>
+                    <span
+                        style="font-size: 18px; vertical-align: middle;display: inline-block; margin-left: 8px; font-weight: bold; color: #fff;">Redirect</span>
+                </div>
+                <div >
+                    <span style="vertical-align: middle;display: inline-block;                ">
+                        <svg viewbox="0 0 79 61" xmlns="http://www.w3.org/2000/svg" style="width: 32px; height:32px;">
+                            <rect x="0" y="0" width="79" height="61" rx="13" ry="13" fill="#bdc0c2" />
+                            <text x="50%" y="50%" dy="17.5px" text-anchor="middle" fill="#4e4e4e" font-size="50"
+                                font-weight="bold">R2</text>
+                        </svg>
+                    </span>
+                    <span
+                        style="font-size: 18px; vertical-align: middle;display: inline-block; margin-left: 8px; font-weight: bold; color: #fff;">Options</span>
+                </div>
             </div>
-        </div> <br><br><br><br><br><br>&nbsp;
+        </div>
+
         <div id="before-jb-view">
+
             <div id="run-jb-parent" class="opacity-transition"
                 style="display: flex; justify-content: center; align-items: center; position: absolute; top: 0;left: 0; width: 100%; height: 100%;">
                 <a tabindex="0" class="btn" style="max-width: 50%;" id="run-jb" onclick="runJailbreak()">Jailbreak</a>
             </div>
-                </div>
+
             <div id="jb-progress" class="opacity-transition"
                 style="display: flex; flex-direction: column; justify-content: center; align-items: center; position: absolute; top: 0;left: 0; width: 100%; height: 100%; opacity: 0; pointer-events: none;">
                 <div class="lds-ellipsis" style="margin-top: 40px;">
@@ -104,17 +140,17 @@
                 </div>
                 <p id="jb-progress-status-text" style="text-align: center; width: 100%; margin-top: 40px;">
                     Getting
-                    ready... <br /><span class="secondary-text">(may look frozen)</span></p>
+                    ready...</p>
                 <textarea id="console" class="log" style="display: none;"></textarea>
-            </div>
-
-            <div id="post-jb-view" class="opacity-transition"
+            </div> &nbsp;<br><br><br><br><br>
+              <div class="main-wrapper">
+                <div id="post-jb-view" class="opacity-transition"
                 style="width: 100%;position: relative; max-height: 10px; overflow-y: hidden; margin-top: 200px;">
                 <!-- it seems like sometimes display none to anything else and transforms like causing crashes after the jailbreak. idk. -->
                 <div id="payloads-list" class="grid-container">
                 </div>
-            </div>
-
+                </div>
+                </div>
             <center style="position: fixed;bottom: 0;width: 100%;margin-bottom: 10px;font-size: 13px;"
                 class="info opacity-transition" id="credits">
                 <a href="https://github.com/idlesauce/PS5-Exploit-Host" style="padding-bottom: -20px;">
@@ -126,7 +162,7 @@
                     </svg>
                     Host GitHub repo
                 </a>
-                <b id="version"> | v1.04</b>
+                <b id="version"> | v1.04 | v1.170</b>
                 <h3 style="margin-top: 0;padding-top: 0;">
                     <br />
                     <a href="https://twitter.com/theflow0">@theflow0</a>,
@@ -139,12 +175,26 @@
                     <a href="https://twitter.com/flat_z">@flat_z</a>,
                     <a href="https://twitter.com/notzecoxao">@notzecoxao</a>,
                     <a href="https://twitter.com/SocraticBliss">@SocraticBliss</a>,
-                    laureeeeeee
+                    laureeeeeee,
+                    abc
                 </h3>
             </center>
         </div>
     </div>
 
+    <div id="menu-overlay" style="position: fixed; top: -100%; left: 0; width: 100%; min-height: 100%; height: 100%; background-color: #111111d0; opacity:0;" class="opacity-transition"></div>
+    <div id="menu-bar-wrapper" style="position: absolute; top: 0; right: -500px; width: 320px; min-height: 100%; height: 100%; padding: 16px; box-sizing: border-box; transition: right 0.35s ease-in-out;">
+        <div id="menu-bar" style="position: relative;top:0;left: 0; width:100%;height:100%; background-color: #161622; border-radius: 16px; padding: 15px; box-sizing: border-box;">
+            <p style="margin: 10px; font-weight: bold;">Webkit exploit type:</p>
+            <div style="margin: 10px;" >
+                <input type="radio" id="wk-exploit-psfree" name="wk-exploit" value="psfree" onchange="wk_expoit_type_changed(event)" >
+                <label for="psfree" >PSFree</label><br>
+                <input type="radio" id="wk-exploit-fontface" name="wk-exploit" value="fontface" onchange="wk_expoit_type_changed(event)">
+                <label for="fontface">FontFace</label>
+            </div>
+        </div>
+    </div>
+    
 </body>
 
 </html>
