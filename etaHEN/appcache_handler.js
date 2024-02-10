@@ -44,13 +44,13 @@ function add_cache_event_toasts() {
     // }, false);
 
     appCache.addEventListener('downloading', function (e) {
-        showToast('⭐️Downloading new cache.');
+        showToast('⭐️ Downloading new cache.');
     }, false);
 
     appCache.addEventListener('error', function (e) {
         // only show error toast if we're online
         if (navigator.onLine) {
-            showToast('❌Error while caching site.', 5000);
+            showToast('❌ Error while caching site.', 5000);
         }
     }, false);
 
