@@ -2,6 +2,14 @@ const payload_map =
     [
 		{
             displayTitle: '⭐️etaHEN',
+            description: 'Fixed 4.02 support ',
+            fileName: 'etaHEN-1.6B.bin',
+            author: 'LightningMods_, sleirsgoevy, ChendoChap, astrelsky, illusion',
+            source: 'https://github.com/LightningMods/etaHEN',
+            version: '1.6 beta'
+        },
+		{
+            displayTitle: '⭐️etaHEN',
             description: 'etaHEN 1.5B ',
             fileName: 'etaHEN-1.5B.bin',
             author: 'LightningMods_, sleirsgoevy, ChendoChap, astrelsky, illusion',
