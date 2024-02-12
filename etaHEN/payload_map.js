@@ -1,7 +1,7 @@
 const payload_map =
     [
 		{
-            displayTitle: 'etaHEN',
+            displayTitle: 'etaHEN 1.6B',
             description: 'Fixed 4.02 support ',
             fileName: 'etaHEN-1.6B.bin',
             author: 'LightningMods_, sleirsgoevy, ChendoChap, astrelsky, illusion',
@@ -9,7 +9,7 @@ const payload_map =
             version: '1.6 beta'
         },
 		{
-            displayTitle: 'etaHEN',
+            displayTitle: 'etaHEN 1.5B',
             description: 'etaHEN 1.5B ',
             fileName: 'etaHEN-1.5B.bin',
             author: 'LightningMods_, sleirsgoevy, ChendoChap, astrelsky, illusion',
@@ -17,7 +17,7 @@ const payload_map =
             version: '1.5 beta'
         },
 		{
-            displayTitle: '⭐etaHEN',
+            displayTitle: 'etaHEN 1.4B',
             description: 'support for 4.00, 4.02',
             fileName: 'etaHEN-1.4B.bin',
             author: 'LightningMods_, sleirsgoevy, ChendoChap, astrelsky, illusion',
@@ -25,7 +25,7 @@ const payload_map =
             version: '1.4 beta'
         },
 	    {
-            displayTitle: 'etaHEN',
+            displayTitle: 'etaHEN 1.3B',
             description: 'Kstuff for 3.xx added (3.00 tested).',
             fileName: 'etaHEN-1.3B.bin',
             author: 'LightningMods_, sleirsgoevy, ChendoChap, astrelsky, illusion',
@@ -33,7 +33,7 @@ const payload_map =
             version: '1.3 beta'
         },
         {
-            displayTitle: '⭐etaHEN',
+            displayTitle: 'etaHEN 1.2B',
             description: 'Runs With 3.xx and 4.xx. FPKG enabler For FW 4.03-4.51 Only.',
             fileName: 'etaHEN-1.2B.bin',
             author: 'LightningMods_, sleirsgoevy, ChendoChap, astrelsky, illusion',
@@ -105,7 +105,7 @@ const payload_map =
             version: '1.0.2'
         },
         {
-            displayTitle: '⚙PS5_Browser_appCache_remove',
+            displayTitle: 'PS5_Browser_appCache_remove',
             description: 'Removes appcache from browser.',
             fileName: 'Browser_appCache_remove.elf',
             author: 'Storm21CH',
