@@ -35,6 +35,7 @@ module/memtools.js
 module/rw.js
 module/syscalls.js
 module/utils.js
+payloads/Browser_appCache_remove.elf
 payloads/elfldr.elf
 payloads/hello_world.elf
 psfree/module
