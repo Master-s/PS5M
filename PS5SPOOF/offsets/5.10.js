@@ -390,5 +390,3 @@ const OFFSET_KERNEL_UTOKEN_FLAGS                = 0x07286778; // data = 0x066367
 const OFFSET_KERNEL_PRISON0                     = 0x02A63470; // data = 0x01E13470
 const OFFSET_KERNEL_ROOTVNODE                   = 0x07493510; // data = 0x06843510
 const OFFSET_KERNEL_PS4SDK                      = 0x03ABC0FC; // data = 0x02e6c0fc //ok sdkps4
-const OFFSET_KERNEL_PS5SDK                      = 0x023D8FA8; // data = 0x01788fa8 //ok sdkps5
-const OFFSET_KERNEL_PS5UDP                      = 0x07286820; // data = 0x06636820 //ok udpps5
